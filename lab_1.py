@@ -30,3 +30,14 @@ y = 3.161
 s = sqrt(x * y ** 2  + y * sin(x) + 142 * x ** 2  * y) + tan(x* y) - (142 * (y - x)) / 16.32
 
 print(s)
+print(int(y))
+
+str_1 = "Hello "
+str_2 = "World"
+delete_str = "l"
+# index = 2
+# str_1 = str_1[:index] + str_1[index + 1:]
+str_1 = str_1.replace(delete_str, "")
+
+print(str_1 + str_2)
+
