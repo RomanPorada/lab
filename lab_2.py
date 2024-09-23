@@ -1,11 +1,14 @@
+# завдання 1
 # імпорти потрібних функцій
 from math import atan, tan, log
 
 # присвоєння змінній х початкового значення
 x = 0.3
+max_x = 3.5
+h = 0.3
 
 # виконання обчислень
-while x  <= 3.5:
+while x  <= max_x:
     if x < 1:
         result = atan(1/x)
     elif 1 <= x < 3:
@@ -13,15 +16,31 @@ while x  <= 3.5:
     elif x >= 3:
         result = 1 / (1 + log(x))
     print(f"result 1 = {result}")
-    x += 0.3
+    x += h
 
+# завдання 2
 # присвоєння значень змінних
 n = 1
+result_final = 0.0
+result_curent = 0.0
 x = -0.5
+deviation = 0.001
 
-# виконання обчислень
-while x <= 0:
-    result_2 = -1 * ((x ** n)/n)
-    print(f"result 2 = {result_2.__round__(3)}")
-    n += 1
+# виклик циклів
+while x.__round__(2) <= 0:
+    result_curent = (x ** n) / n
+    result_final += result_curent
+    while result_curent.__abs__() > deviation:
+        result_curent = (x ** n) / n
+        result_final += result_curent       
+        n += 1
+    result_final *= -1
+    print(
+        "x = " + x.__round__(3).__str__() 
+        + " result = " + result_final.__str__()
+        )
+    result_curent = 0.0
+    result_final = 0.0
     x += 0.05
+    x = x.__round__(2)
+    n = 1
