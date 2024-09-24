@@ -27,7 +27,7 @@ x = -0.5
 deviation = 0.001
 
 # виклик циклів
-while x.__round__(2) <= 0:
+while x <= 0:
     result_curent = (x ** n) / n
     result_final += result_curent
     while result_curent.__abs__() > deviation:
@@ -42,5 +42,5 @@ while x.__round__(2) <= 0:
     result_curent = 0.0
     result_final = 0.0
     x += 0.05
-    x = x.__round__(2)
+    x = x
     n = 1
