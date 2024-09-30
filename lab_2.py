@@ -37,10 +37,10 @@ while x <= 0:
     result_final *= -1
     print(
         "x = " + x.__round__(3).__str__() 
-        + " result = " + result_final.__str__()
+        + " result = " + result_final.__round__(2).__str__()
         )
     result_curent = 0.0
     result_final = 0.0
     x += 0.05
-    x = x
+    x = x.__round__(2)
     n = 1
