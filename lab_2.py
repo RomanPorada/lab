@@ -16,7 +16,9 @@ while x  <= max_x:
     elif x >= 3:
         result = 1 / (1 + log(x))
     print(f"result 1 = {result}")
+    print(f"x = {x}")
     x += h
+    x = x.__round__(2)
 
 # завдання 2
 # присвоєння значень змінних
