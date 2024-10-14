@@ -8,8 +8,9 @@ class Camera:
     __manufacturer : str
     __memory_capacity : int
     __zoom_factor : float
+    _anonim : int
 
-    def __init__(self, year_of_manufacture = 2024, country_of_manufacture="Невідомо", manufacturer = "Невідомо", memory_capasity = 0, zoom_factor = 1.0):
+    def __init__(self, year_of_manufacture = 2024, country_of_manufacture="Невідомо", manufacturer = "Невідомо", memory_capasity = 0, zoom_factor = 1.0, anonim = 1):
         """
             Конструктор який присвоює значення по замовчуванню
         """
@@ -18,6 +19,7 @@ class Camera:
         self.__manufacturer = manufacturer
         self.__memory_capacity = memory_capasity
         self.__zoom_factor = zoom_factor
+        self._anonim = anonim
     
     def get_manufactyrer(self):
         """
@@ -59,7 +61,7 @@ class Camera:
         """
             Метод перевизначення __str__
         """
-        return f"Camera(year of manufacture = {self.year_of_manufacture}, country of manufacture = {self.country_of_manufacture}, manufacturer = {self.__manufacturer}, memory capacity = {self.__memory_capacity}, zoom factor = {self.__zoom_factor})"
+        return f"Camera(year of manufacture = {self.year_of_manufacture}, country of manufacture = {self.country_of_manufacture}, manufacturer = {self.__manufacturer}, memory capacity = {self.__memory_capacity}, zoom factor = {self.__zoom_factor}, anonim = {self._anonim})"
     
     def __repr__(self):
         """
@@ -71,13 +73,14 @@ class Camera:
         """
             Деструктор
         """
-        print(f"Object is camera {self.__manufacturer} is deletet")
+        print(f"Object is camera {self.__manufacturer} is deleted")
 
 def main():
-    camera_1 = Camera(2021, "USA", "Sony", 64000, 3.6)
-    camera_2 = Camera(2022, "Japen", "Canon", 32000, 2.5)
+    camera_1 = Camera(2021, "USA", "Sony", 64000, 3.6, 65)
+    camera_2 = Camera(2022, "Japen", "Canon", 32000, 2.5, 12)
     camera_3 = Camera(1998, "Poland", "Nikon", 16000, 5)
-
+    camera_1.year_of_manufacture = 123
+    camera_1._anonim = 1776
     print(camera_1)
     print(camera_2)
     print(camera_3)
