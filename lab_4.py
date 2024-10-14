@@ -73,15 +73,15 @@ class Camera:
         """
         print(f"Object is camera {self.__manufacturer} is deletet")
     
+if __name__ == "__main__":
+    camera_1 = Camera(2021, "USA", "Sony", 64000, 3.6)
+    camera_2 = Camera(2022, "Japen", "Canon", 32000, 2.5)
+    camera_3 = Camera(1998, "Poland", "Nikon", 16000, 5)
 
-camera_1 = Camera(2021, "USA", "Sony", 64000, 3.6)
-camera_2 = Camera(2022, "Japen", "Canon", 32000, 2.5)
-camera_3 = Camera(1998, "Poland", "Nikon", 16000, 5)
+    print(camera_1)
+    print(camera_2)
+    print(camera_3)
 
-print(camera_1)
-print(camera_2)
-print(camera_3)
-
-print(f"camera 1 manufacturer is {camera_1.get_manufactyrer()}")
-print(f"camera 2 memory capaciti is {camera_2.get_memory_capacity()} MB")
-print(f"camer 3 zoom factor is {camera_3.get_zoom_factor()}")
+    print(f"camera 1 manufacturer is {camera_1.get_manufactyrer()}")
+    print(f"camera 2 memory capaciti is {camera_2.get_memory_capacity()} MB")
+    print(f"camer 3 zoom factor is {camera_3.get_zoom_factor()}")
