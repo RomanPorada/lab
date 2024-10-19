@@ -1,11 +1,11 @@
 from enum import Enum
 
 class AtomType(Enum):
-    ISOTOPE = 1
-    RADIOACTIVE = 2
-    ION = 3
-    ANTIMATTER = 4 
-    STABLE = 5
+    ISOTOPE = "Isotope"
+    RADIOACTIVE = "Radiactive"
+    ION = "Ion"
+    ANTIMATTER = "Antimatter" 
+    STABLE = "Stable"
 
 class Atom:
     def __init__(self, name : str, atomic_mass_unit : int, neutrons_number: int, protons_number : int, electrons_number : int, atom_tupe : AtomType):
