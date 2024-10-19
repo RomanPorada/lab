@@ -2,18 +2,20 @@ from atom import Atom
 import periodic_system
 
 class Molecule:
-    def __init__(self, name: str, atoms: list[Atom]):
-        self.name = name
-        self.atoms = atoms
+    __name : str
+    __atoms : list
+    def __init__(self, name = "Навідомо", atoms = []):
+        self.__name = name
+        self.__atoms = atoms
     
     def sort_atoms(self):
-        self.atoms.sort(key=lambda atom: atom.atomic_mass_unit)
+        self.__atoms.sort(key=lambda atom: atom.atomic_mass_unit)
 
     def __str__(self):
         atoms = []
-        for el in self.atoms:
+        for el in self.__atoms:
             atoms.append(el.name)
-        return f"Molecule: (name = {self.name}, atoms = {atoms})"
+        return f"Molecule: (name = {self.__name}, atoms = {atoms})"
 
 def find_average_mass(atoms: list[Atom]):
     if not atoms: 
