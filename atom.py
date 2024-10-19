@@ -8,7 +8,14 @@ class AtomType(Enum):
     STABLE = "Stable"
 
 class Atom:
-    def __init__(self, name : str, atomic_mass_unit : int, neutrons_number: int, protons_number : int, electrons_number : int, atom_tupe : AtomType):
+    name : str
+    atomic_mass_unit: int
+    neutrons_number: int
+    protons_number : int 
+    electrons_number : int
+    atom_tupe : AtomType
+
+    def __init__(self, name = "невідомо", atomic_mass_unit = 1, neutrons_number = 1, protons_number = 1, electrons_number = 1, atom_tupe = AtomType.STABLE):
         self.name = name
         self.atomic_mass_unit = atomic_mass_unit
         self.neytrons_number = neutrons_number
@@ -20,4 +27,4 @@ class Atom:
         return self.neytrons_number == self.electrons_number
         
     def __repr__(self):
-        return f"{self.name}(mass: {self.atomic_mass}, neutrons: {self.neutrons}, protons: {self.protons}, electrons: {self.electrons}, type: {self.atom_type.name})"
+        return f"{self.name}(mass: {self.atomic_mass_unit}, neutrons: {self.neutrons_number}, protons: {self.protons_number}, electrons: {self.electrons_number}, type: {self.atom_type.name})"
