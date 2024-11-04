@@ -20,9 +20,6 @@ def sort(func):
         return func(sorted_matrix)
     return sorted_matrix
 
-# print("Впорядкована матриця")
-# sorted_matrix = [sort(row) for row in matrix]
-
 @sort
 def product_column_elements(matrix):
     ln = len(matrix)
