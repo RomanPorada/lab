@@ -4,19 +4,26 @@ matrix = [[19, 62, -45, -1, 84],
           [-3, -8, -4, -6, -22],
           [98, -5, -3, 0, 11]]
 
-def sort(matrix_rov):
-    ln = len(matrix_rov)
-    for i in range(ln):
-        for j in range(0, ln-i-1):
-            if matrix_rov[j] < matrix_rov[j + 1]:
-                matrix_rov[j], matrix_rov[j + 1] = matrix_rov[j + 1], matrix_rov[j]
-    print(matrix_rov)
-    return matrix_rov
+def sort(func):
+    def sorted_matrix(matrix):
+        sorted_matrix = []
+        for matrix_rov in matrix:
+            ln = len(matrix_rov)
+            for i in range(ln):
+                for j in range(0, ln-i-1):
+                    if matrix_rov[j] < matrix_rov[j + 1]:
+                        matrix_rov[j], matrix_rov[j + 1] = matrix_rov[j + 1], matrix_rov[j]
+            sorted_matrix.append(matrix_rov)
+        print("Впорядкована матриця:")
+        for row in sorted_matrix:
+            print(row)
+        return func(sorted_matrix)
+    return sorted_matrix
 
-print("Впорядкована матриця")
-sorted_matrix = [sort(row) for row in matrix]
+# print("Впорядкована матриця")
+# sorted_matrix = [sort(row) for row in matrix]
 
-
+@sort
 def product_column_elements(matrix):
     ln = len(matrix)
     products = []
@@ -29,7 +36,7 @@ def product_column_elements(matrix):
         products.append(product)
     return products
 
-product = product_column_elements(sorted_matrix)
+product = product_column_elements(matrix)
 print(f"Добуток елементів стовпців матриці що знаходяться під головнобю діагоналю: \n {product}")
 
 
