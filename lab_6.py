@@ -7,13 +7,13 @@ matrix = [[19, 62, -45, -1, 84],
 def sort(func):
     def sorted_matrix(matrix):
         sorted_matrix = []
-        for matrix_rov in matrix:
-            ln = len(matrix_rov)
+        for matrix_row in matrix:
+            ln = len(matrix_row)
             for i in range(ln):
                 for j in range(0, ln-i-1):
-                    if matrix_rov[j] < matrix_rov[j + 1]:
-                        matrix_rov[j], matrix_rov[j + 1] = matrix_rov[j + 1], matrix_rov[j]
-            sorted_matrix.append(matrix_rov)
+                    if matrix_row[j] < matrix_row[j + 1]:
+                        matrix_row[j], matrix_row[j + 1] = matrix_row[j + 1], matrix_row[j]
+            sorted_matrix.append(matrix_row)
         print("Впорядкована матриця:")
         for row in sorted_matrix:
             print(row)
@@ -36,6 +36,9 @@ def product_column_elements(matrix):
 product = product_column_elements(matrix)
 print(f"Добуток елементів стовпців матриці що знаходяться під головнобю діагоналю: \n {product}")
 
+sum = 0
+for el in product:
+    sum += el
+arithmetic_average = sum/len(product)
 
-arithmetic_average = sum(product)/len(product)
 print(f"середнє арефметичне значення добутків елементів стовпців матриці що знаходяться під головнобю діагоналю: \n {arithmetic_average}")
