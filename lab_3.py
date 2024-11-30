@@ -31,10 +31,8 @@ n = int(input("Введіть значення довжини списку(во�
 min_value = int(input("Введіть початок відрізка з якого буде формуватися список: "))
 max_value = int(input("Введіть кінець відрізка з якого буде формуватися список: "))
 
-# Генерація випадкового списку
 random_list = generate_random_list(n, min_value, max_value)
 
-# Виведення результатів
 print("Випадкова послідовність:", random_list)
 print("Мінімальне значення для балансування:", min_value_to_balance(random_list))
 
