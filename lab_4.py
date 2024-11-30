@@ -83,7 +83,7 @@ def main():
     camera_1._anonim = 1776
     print(camera_1)
     print(camera_2)
-    print(camera_3)
+    print(camera_3.__repr__())
 
     print(f"camera 1 manufacturer is {camera_1.get_manufactyrer()}")
     print(f"camera 2 memory capaciti is {camera_2.get_memory_capacity()} MB")
