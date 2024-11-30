@@ -1,13 +1,9 @@
-# завдання 1
-# імпорти потрібних функцій
 from math import atan, tan, log
 
-# присвоєння змінній х початкового значення
 x = 0.3
 max_x = 3.5
 h = 0.3
 
-# виконання обчислень
 while x  <= max_x:
     if x < 1:
         result = atan(1/x)
@@ -20,15 +16,12 @@ while x  <= max_x:
     x += h
     x = x.__round__(2)
 
-# завдання 2
-# присвоєння значень змінних
 n = 1
 result_final = 0.0
 result_curent = 0.0
 x = -0.5
 deviation = 0.001
 
-# виклик циклів
 while x <= 0:
     result_curent = (x ** n) / n
     result_final += result_curent
