@@ -67,7 +67,7 @@ atoms = [getattr(periodic_system, name.strip()) for name in atoms_names]
 molecule = Molecule(name, atoms)
 
 print(molecule)
-print(molecule.formula(sort=False))
+print(molecule.formula(sort=True))
 molecule.sort_atoms()
 print(molecule)
 print(molecule.find_mass())
